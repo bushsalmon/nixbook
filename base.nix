@@ -10,12 +10,17 @@ in
 
   systemd.services."NetworkManager-wait-online".enable = true;
 
+  # Enable and persist Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   # Enable the X11 windowing system.
+  #You can disable this if you're only running the Wayland Session
   services.xserver.enable = true;
 
   # Enable the Cinnamon Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   xdg.portal.enable = true;
 
   # Enable Printing
@@ -28,19 +33,14 @@ in
 
   environment.systemPackages = with pkgs; [
     git
-    firefox
     libnotify
     gawk
     gnugrep
     sudo
-    gnome-software
-    gnome-calculator
-    gnome-calendar
-    gnome-screenshot
+    kdePackages.discover
     flatpak
     xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-gnome
+    xdg-desktop-portal-kde
     system-config-printer
   ];
 
