@@ -4,7 +4,7 @@ x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
-inode/directory=nemo.desktop
+inode/directory=dolphin.desktop
 image/avif=xviewer.desktop
 image/bmp=xviewer.desktop
 image/gif=xviewer.desktop
@@ -34,7 +34,7 @@ application/pdf=xreader.desktop
 text/plain=xed.desktop
 
 [Added Associations]
-inode/directory=nemo.desktop;
+inode/directory=dolphin.desktop;
 image/avif=xviewer.desktop;
 image/bmp=xviewer.desktop;
 image/gif=xviewer.desktop;
