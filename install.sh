@@ -26,13 +26,8 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
   sudo nixos-rebuild switch
 
   # Add flathub and some apps
-  flatpak install flathub com.google.Chrome -y
-  flatpak install flathub us.zoom.Zoom -y
-  flatpak install flathub org.libreoffice.LibreOffice -y
-  
-  # Fix for zoom flatpak
-  flatpak override --env=ZYPAK_ZYGOTE_STRATEGY_SPAWN=0 us.zoom.Zoom
-  
+  flatpak install flathub com.brave.Browser -y
+
   reboot
 else
   echo "Nixbook Install Cancelled!"
