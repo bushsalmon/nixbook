@@ -136,7 +136,7 @@ in
       nice -n 19 ionice -c 3 nixos-rebuild boot --upgrade
 
       # Fix for zoom flatpak
-      flatpak override --env=ZYPAK_ZYGOTE_STRATEGY_SPAWN=0 us.zoom.Zoom
+      #flatpak override --env=ZYPAK_ZYGOTE_STRATEGY_SPAWN=0 us.zoom.Zoom
     '';
     serviceConfig = {
       Type = "oneshot";
