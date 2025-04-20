@@ -16,7 +16,7 @@ in
 
   # Enable the X11 windowing system.
   #You can disable this if you're only running the Wayland Session
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   # Enable the Cinnamon Desktop Environment.
   services.displayManager.sddm.enable = true;
