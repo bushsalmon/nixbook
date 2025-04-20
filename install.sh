@@ -28,7 +28,9 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
   # Add flathub and some apps
   flatpak install flathub com.brave.Browser -y
 
-  reboot
+  echo "Nixbook installation complete!"
+  read -p "Press Enter to reboot the system..."
+
 else
   echo "Nixbook Install Cancelled!"
 fi
